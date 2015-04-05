@@ -1,0 +1,30 @@
+---
+name: ch2
+url: /
+---
+
+<div class="grid-container" ng-controller="MainCtrl as ctrl">
+
+  <h1 class="page-header">Chapter 2</h1>
+
+  <button ng-click="ctrl.changeNotes()">Change Notes</button>
+
+  <!-- Notes 1 -->
+  <div class="note" ng-repeat="note in ctrl.notes1" ng-class="ctrl.getNoteClass(note.done)">
+    {{note.$$hashKey}}
+    <span class="note-label"> {{note.label}}</span>
+    <span class="author" ng-bind="author"></span>
+  </div>
+
+  <hr>
+
+  <!-- Notes 2 -->
+  <div class="note" ng-repeat="note in ctrl.notes2 track by note.id" ng-class="ctrl.getNoteClass(note.done)">
+    {{note.$$hashKey}}
+    <span class="note-label"> {{note.label}}</span>
+    <span class="author" ng-bind="author"></span>
+  </div>
+
+  <hr>
+
+</div>

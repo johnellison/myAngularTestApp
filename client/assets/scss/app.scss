@@ -1,2 +1,32 @@
 @import "settings";
 @import "foundation";
+
+// config
+button {
+  @include button();
+  margin-bottom: 1rem;
+}
+
+// layout
+
+.page-header {
+  text-align: center;
+}
+
+.grid-content {
+  padding: 2rem 0;
+}
+
+.note {
+  margin-bottom: 1rem;
+  padding: 1em;
+}
+
+// state
+.done {
+  background-color: $success-color;
+}
+
+.pending {
+  background-color: $warning-color;
+}
